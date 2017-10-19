@@ -2,7 +2,6 @@ var path = require('path')
 var utils = require('./utils')
 
 var projectRoot = path.resolve(__dirname, '../')
-const vuxLoader = require('vux-loader')
 
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
@@ -63,16 +62,4 @@ let webpackConfig = {
   }
 }
 
-
-module.exports = vuxLoader.merge(webpackConfig, {
-  plugins: ['vux-ui', 'progress-bar', 'duplicate-style', {
-    name: 'less-theme',
-    path: 'src/styles/theme.less'
-  }, {
-    name: 'i18n',
-    vuxStaticReplace: false,
-    staticReplace: false,
-    extractToFiles: 'src/locales/components.yml',
-    localeList: ['en', 'zh-CN']
-  }]
-})
+module.exports = webpackConfig

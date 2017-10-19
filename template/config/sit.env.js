@@ -3,5 +3,4 @@
 module.exports = {
   NODE_ENV: '"production"',
   BASE_API: '"https://appcon.leocheery.net/open-platform/api/v1.1.0/"',
-  WS:'"wss://appcon.leocheery.net:7799"'
 }

@@ -7,5 +7,4 @@ var prodEnv = require('./prod.env')
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
   BASE_API:'"https://appcon.leocheery.net/open-platform/api/v1.1.0/"',
-  WS:'"wss://appcon.leocheery.net:7799"'
 })
